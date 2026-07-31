@@ -5,12 +5,14 @@ public class Productos {
     //Construcción de la Calse Productos la cual contendra los atributos, constructor, getters y setter propios de la Clase.
 
     private int idProducto;
+    private String nombre;
     private double precio;
     private int stock;
     private String categoria;
 
-    public Productos(int idProducto, double precio, int stock, String categoria) {
+    public Productos(int idProducto, String nombre, double precio, int stock, String categoria) {
         this.idProducto = idProducto;
+        this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
         this.categoria = categoria;
@@ -24,6 +26,14 @@ public class Productos {
         this.idProducto = idProducto;
     }
 
+    public int getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
     public double getPrecio() {
         return precio;
     }
