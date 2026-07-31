@@ -58,5 +58,12 @@ public class Productos {
         this.categoria = categoria;
     }
 
-
+    @Override
+    public String toString() {
+        return "ID: " + idProducto +
+                ", Nombre: " + nombre +
+                ", Precio: " + precio +
+                ", Stock: " + stock +
+                ", Categoría: " + categoria;
+    }
 }
