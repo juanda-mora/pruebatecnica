@@ -1,0 +1,23 @@
+[
+  {
+    "idProducto": 1,
+    "nombre": "Queso",
+    "precio": 8500.0,
+    "stock": 10,
+    "categoria": "Lácteos"
+  },
+  {
+    "idProducto": 2,
+    "nombre": "Pan Integral",
+    "precio": 4500.0,
+    "stock": 40,
+    "categoria": "Panadería"
+  },
+  {
+    "idProducto": 3,
+    "nombre": "Jugo Natural",
+    "precio": 3500.0,
+    "stock": 15,
+    "categoria": "Bebidas"
+  }
+]
