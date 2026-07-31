@@ -13,8 +13,12 @@ public class ProductoService {
     }
 
     public void agregarProducto(Productos producto) {
-        productos.add(producto);
+    if (producto.getPrecio() < 0) {
+        throw new IllegalArgumentException("El precio no puede ser negativo");
     }
+
+    productos.add(producto);
+}
 
     public void eliminarProducto(int idProducto) {
         productos.removeIf(producto -> producto.getIdProducto() == idProducto);
