@@ -1,7 +1,7 @@
 [
   {
     "idProducto": 1,
-    "nombre": "Queso",
+    "nombre": "Leche",
     "precio": 8500.0,
     "stock": 10,
     "categoria": "Lácteos"
