@@ -1,4 +1,4 @@
-package com.example.entitites;
+package com.example.entities;
 
 public class Producto {
 
@@ -9,6 +9,27 @@ public class Producto {
     private String categoria;
 
     public Producto(int idProducto, String nombre, double precio, int stock, String categoria) {
+
+        if (idProducto <= 0) {
+            throw new IllegalArgumentException("El ID debe ser mayor que cero.");
+        }
+
+        if (nombre == null || nombre.trim().isEmpty()) {
+            throw new IllegalArgumentException("El nombre es obligatorio.");
+        }
+
+        if (precio < 0) {
+            throw new IllegalArgumentException("El precio no puede ser negativo.");
+        }
+
+        if (stock < 0) {
+            throw new IllegalArgumentException("El stock no puede ser negativo.");
+        }
+
+        if (categoria == null || categoria.trim().isEmpty()) {
+            throw new IllegalArgumentException("La categoría es obligatoria.");
+        }
+
         this.idProducto = idProducto;
         this.nombre = nombre;
         this.precio = precio;

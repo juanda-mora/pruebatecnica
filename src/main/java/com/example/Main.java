@@ -2,7 +2,7 @@ package com.example;
 
 import java.util.Scanner;
 
-import com.example.entitites.Producto;
+import com.example.entities.Producto;
 import com.example.services.ProductoService;
 
 public class Main {
@@ -56,8 +56,7 @@ public class Main {
                                 nombre,
                                 precio,
                                 stock,
-                                categoria
-                        );
+                                categoria);
 
                         servicio.agregarProducto(nuevoProducto);
                         System.out.println("Producto creado correctamente.");
@@ -127,8 +126,7 @@ public class Main {
                                 nuevoNombre,
                                 nuevoPrecio,
                                 nuevoStock,
-                                nuevaCategoria
-                        );
+                                nuevaCategoria);
 
                         boolean actualizado = servicio.actualizarProducto(productoActualizado);
 
@@ -145,14 +143,19 @@ public class Main {
                     break;
 
                 case 5:
+
                     System.out.println("\n--- ELIMINAR PRODUCTO ---");
 
                     System.out.print("Ingrese el ID del producto: ");
                     int idEliminar = scanner.nextInt();
 
-                    servicio.eliminarProducto(idEliminar);
+                    boolean eliminado = servicio.eliminarProducto(idEliminar);
 
-                    System.out.println("Proceso de eliminación completado.");
+                    if (eliminado) {
+                        System.out.println("Producto eliminado correctamente.");
+                    } else {
+                        System.out.println("No existe un producto con ese ID.");
+                    }
 
                     break;
 
