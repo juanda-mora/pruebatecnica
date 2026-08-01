@@ -1,18 +1,18 @@
-package com.example.Services;
+package com.example.services;
 
 import java.util.ArrayList;
 
-import com.example.Entitites.Productos;
+import com.example.entitites.Producto;
 
 public class ProductoService {
 
-    private ArrayList<Productos> productos;
+    private ArrayList<Producto> productos;
 
     public ProductoService() {
         this.productos = new ArrayList<>();
     }
 
-    public void agregarProducto(Productos producto) {
+    public void agregarProducto(Producto producto) {
     if (producto.getPrecio() < 0) {
         throw new IllegalArgumentException("El precio no puede ser negativo");
     }
@@ -24,8 +24,8 @@ public class ProductoService {
         productos.removeIf(producto -> producto.getIdProducto() == idProducto);
     }
 
-    public Productos buscarProducto(int idProducto) {
-    for (Productos producto : productos) {
+    public Producto buscarProducto(int idProducto) {
+    for (Producto producto : productos) {
         if (producto.getIdProducto() == idProducto) {
             return producto;
         }
@@ -33,7 +33,7 @@ public class ProductoService {
     return null;
 }
 
-    public boolean actualizarProducto(Productos productoActualizado) {
+    public boolean actualizarProducto(Producto productoActualizado) {
 
     if (productoActualizado.getPrecio() < 0) {
         throw new IllegalArgumentException("El precio no puede ser negativo");
@@ -49,23 +49,8 @@ public class ProductoService {
     return false;
 }
 
-    public boolean actualizarProducto(Productos productoActualizado) {
 
-    if (productoActualizado.getPrecio() < 0) {
-        throw new IllegalArgumentException("El precio no puede ser negativo");
-    }
-
-    for (int i = 0; i < productos.size(); i++) {
-        if (productos.get(i).getIdProducto() == productoActualizado.getIdProducto()) {
-            productos.set(i, productoActualizado);
-            return true;
-        }
-    }
-
-    return false;
-}
-
-    public ArrayList<Productos> obtenerTodosLosProductos() {
+    public ArrayList<Producto> obtenerTodosLosProductos() {
         return productos;
     }
 }

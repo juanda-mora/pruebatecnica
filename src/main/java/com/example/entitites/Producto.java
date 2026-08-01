@@ -1,6 +1,6 @@
-package com.example.Entitites;
+package com.example.entitites;
 
-public class Productos {
+public class Producto {
 
     private int idProducto;
     private String nombre;
@@ -8,7 +8,7 @@ public class Productos {
     private int stock;
     private String categoria;
 
-    public Productos(int idProducto, String nombre, double precio, int stock, String categoria) {
+    public Producto(int idProducto, String nombre, double precio, int stock, String categoria) {
         this.idProducto = idProducto;
         this.nombre = nombre;
         this.precio = precio;

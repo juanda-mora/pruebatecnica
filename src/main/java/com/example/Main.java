@@ -2,7 +2,7 @@ package com.example;
 
 import java.util.Scanner;
 
-import com.example.Entitites.Productos;
+import com.example.entitites.Producto;
 import com.example.services.ProductoService;
 
 public class Main {
@@ -51,7 +51,7 @@ public class Main {
                     String categoria = scanner.nextLine();
 
                     try {
-                        Productos nuevoProducto = new Productos(
+                        Producto nuevoProducto = new Producto(
                                 id,
                                 nombre,
                                 precio,
@@ -74,7 +74,7 @@ public class Main {
                     if (servicio.obtenerTodosLosProductos().isEmpty()) {
                         System.out.println("No hay productos registrados.");
                     } else {
-                        for (Productos producto : servicio.obtenerTodosLosProductos()) {
+                        for (Producto producto : servicio.obtenerTodosLosProductos()) {
                             System.out.println(producto);
                         }
                     }
@@ -87,7 +87,7 @@ public class Main {
                     System.out.print("Ingrese el ID del producto: ");
                     int idBuscar = scanner.nextInt();
 
-                    Productos encontrado = servicio.buscarProducto(idBuscar);
+                    Producto encontrado = servicio.buscarProducto(idBuscar);
 
                     if (encontrado != null) {
                         System.out.println("Producto encontrado:");
@@ -122,7 +122,7 @@ public class Main {
 
                     try {
 
-                        Productos productoActualizado = new Productos(
+                        Producto productoActualizado = new Producto(
                                 idActualizar,
                                 nuevoNombre,
                                 nuevoPrecio,
