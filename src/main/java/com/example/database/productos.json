@@ -1,21 +1,21 @@
 [
   {
     "idProducto": 1,
-    "nombre": "Queso",
+    "nombre": "Arroz",
     "precio": 8500.0,
     "stock": 10,
-    "categoria": "Lácteos"
+    "categoria": "Carbohidrato"
   },
   {
     "idProducto": 2,
-    "nombre": "Pan Integral",
+    "nombre": "Baguette",
     "precio": 4500.0,
     "stock": 40,
     "categoria": "Panadería"
   },
   {
     "idProducto": 3,
-    "nombre": "Jugo Natural",
+    "nombre": "Limonada",
     "precio": 3500.0,
     "stock": 15,
     "categoria": "Bebidas"
