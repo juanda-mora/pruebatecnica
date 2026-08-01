@@ -40,8 +40,6 @@ Ejemplo de producto:
 
 2. Ejecutar
 
-3. Ejecutar
-
 ## Dificultad
 
 Es un trabajo breve pero el tiempo me respiro en la nuca.
