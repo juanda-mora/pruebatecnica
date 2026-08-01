@@ -3,7 +3,7 @@ package com.example;
 import java.util.Scanner;
 
 import com.example.Entitites.Productos;
-import com.example.Services.ProductoService;
+import com.example.services.ProductoService;
 
 public class Main {
 
@@ -68,7 +68,6 @@ public class Main {
 
                     break;
 
-
                 case 2:
                     System.out.println("\n--- LISTA DE PRODUCTOS ---");
 
@@ -81,7 +80,6 @@ public class Main {
                     }
 
                     break;
-
 
                 case 3:
                     System.out.println("\n--- BUSCAR PRODUCTO ---");
@@ -99,7 +97,6 @@ public class Main {
                     }
 
                     break;
-
 
                 case 4:
                     System.out.println("\n--- ACTUALIZAR PRODUCTO ---");
@@ -147,7 +144,6 @@ public class Main {
 
                     break;
 
-
                 case 5:
                     System.out.println("\n--- ELIMINAR PRODUCTO ---");
 
@@ -160,19 +156,15 @@ public class Main {
 
                     break;
 
-
                 case 6:
                     System.out.println("Cerrando sistema...");
                     break;
-
 
                 default:
                     System.out.println("Opción inválida.");
             }
 
         } while (opcion != 6);
-
-
         scanner.close();
     }
 }

@@ -2,8 +2,6 @@ package com.example.Entitites;
 
 public class Productos {
 
-    //Construcción de la Calse Productos la cual contendra los atributos, constructor, getters y setter propios de la Clase.
-
     private int idProducto;
     private String nombre;
     private double precio;
@@ -33,7 +31,7 @@ public class Productos {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
+
     public double getPrecio() {
         return precio;
     }

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import com.example.Entitites.Productos;
 
 public class ProductoService {
-    
+
     private ArrayList<Productos> productos;
 
     public ProductoService() {
@@ -25,13 +25,29 @@ public class ProductoService {
     }
 
     public Productos buscarProducto(int idProducto) {
-        for (Productos producto : productos) {
-            if (producto.getIdProducto() == idProducto) {
-                return producto;
-            }
+    for (Productos producto : productos) {
+        if (producto.getIdProducto() == idProducto) {
+            return producto;
         }
-        return null; 
     }
+    return null;
+}
+
+    public boolean actualizarProducto(Productos productoActualizado) {
+
+    if (productoActualizado.getPrecio() < 0) {
+        throw new IllegalArgumentException("El precio no puede ser negativo");
+    }
+
+    for (int i = 0; i < productos.size(); i++) {
+        if (productos.get(i).getIdProducto() == productoActualizado.getIdProducto()) {
+            productos.set(i, productoActualizado);
+            return true;
+        }
+    }
+
+    return false;
+}
 
     public boolean actualizarProducto(Productos productoActualizado) {
 
