@@ -27,13 +27,6 @@ src
 - Validación de datos
 - Persistencia mediante archivo JSON de ejemplo
 
-Ejemplo de producto:
-
-- Queso
-- Precio: 8500
-- Stock: 10
-- Categoría: Lácteos
-
 ## Instalación
 
 1. Clonar el repositorio.
